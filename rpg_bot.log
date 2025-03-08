@@ -1,0 +1,296 @@
+2025-03-08 17:07:49,384 - INFO - Démarrage du bot RPG
+2025-03-08 17:07:49,385 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-08 17:07:49,391 - INFO - logging in using static token
+2025-03-08 17:07:49,421 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 17:07:49,421 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 17:07:50,090 - INFO - Shard ID None has connected to Gateway (Session ID: 0a7feff9c8e78e7885e36b16c98047f8).
+2025-03-08 17:07:52,098 - INFO - Bot connecté en tant que JDR#4227
+2025-03-08 17:08:05,186 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "spell" is not found
+2025-03-08 17:20:12,625 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "dragon" is not found
+2025-03-08 17:23:25,570 - INFO - Démarrage du bot RPG
+2025-03-08 17:23:25,571 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-08 17:23:25,575 - INFO - logging in using static token
+2025-03-08 17:23:25,584 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 17:23:25,584 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 17:23:26,319 - INFO - Shard ID None has connected to Gateway (Session ID: d333cb8df0896eb4f96d4ce690a0cbc1).
+2025-03-08 17:23:28,351 - INFO - Bot connecté en tant que JDR#4227
+2025-03-08 17:23:53,243 - ERROR - Ignoring exception in command use_invisibilite
+Traceback (most recent call last):
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\jeu-de-role\bot_mj.py", line 200, in use_invisibilite
+    await ctx.send(f"{character['name']} devient invisible pendant 1 minute ou jusqu'à ce qu'il attaque ou lance un sort.")
+                      ~~~~~~~~~^^^^^^^^
+TypeError: tuple indices must be integers or slices, not str
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: tuple indices must be integers or slices, not str
+2025-03-08 17:24:12,544 - ERROR - Ignoring exception in command use_soin
+Traceback (most recent call last):
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\jeu-de-role\bot_mj.py", line 186, in use_soin
+    character["hp"] += heal_amount
+    ~~~~~~~~~^^^^^^
+TypeError: tuple indices must be integers or slices, not str
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: tuple indices must be integers or slices, not str
+2025-03-08 17:24:34,583 - INFO - 127.0.0.1 - - [08/Mar/2025 17:24:34] "GET /characters HTTP/1.1" 200 -
+2025-03-08 17:24:34,688 - INFO - 127.0.0.1 - - [08/Mar/2025 17:24:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-08 19:10:30,585 - WARNING - Shard ID None has stopped responding to the gateway. Closing and restarting.
+2025-03-08 19:10:30,864 - INFO - Shard ID None session has been invalidated.
+2025-03-08 19:10:57,520 - INFO - Démarrage du bot RPG
+2025-03-08 19:10:57,521 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-08 19:10:57,524 - INFO - logging in using static token
+2025-03-08 19:10:57,535 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 19:10:57,535 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 19:10:58,399 - INFO - Shard ID None has connected to Gateway (Session ID: 1a1be4c1e65f3ee9e0c135c8c79ee048).
+2025-03-08 19:11:00,417 - INFO - Bot connecté en tant que JDR#4227
+2025-03-08 19:14:10,222 - INFO - Démarrage du bot RPG
+2025-03-08 19:14:10,223 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-08 19:14:10,226 - INFO - logging in using static token
+2025-03-08 19:14:10,235 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 19:14:10,235 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 19:14:11,047 - INFO - Shard ID None has connected to Gateway (Session ID: b3f54c1c220418ac8ae09fd3bcc0bc01).
+2025-03-08 19:14:13,063 - INFO - Bot connecté en tant que JDR#4227
+2025-03-08 19:15:02,082 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "help" is not found
+2025-03-08 19:18:10,105 - INFO - Démarrage du bot RPG
+2025-03-08 19:18:10,106 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-08 19:18:10,110 - INFO - logging in using static token
+2025-03-08 19:18:10,118 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 19:18:10,118 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 19:18:10,819 - INFO - Shard ID None has connected to Gateway (Session ID: 3b2f13ec640b1a521c29b2b8c6b8606b).
+2025-03-08 19:18:12,850 - INFO - Bot connecté en tant que JDR#4227
+2025-03-08 19:18:30,376 - INFO - 127.0.0.1 - - [08/Mar/2025 19:18:30] "[31m[1mGET /characters HTTP/1.1[0m" 401 -
+2025-03-08 19:22:13,760 - INFO - Commande !ping utilisée par greetaill
+2025-03-08 19:22:28,433 - INFO - Commande !roll utilisée par greetaill : 1d20 -> [20] (Total: 20)
+2025-03-08 19:22:36,230 - ERROR - Ignoring exception in command create
+Traceback (most recent call last):
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\jeu-de-role\bot_mj.py", line 173, in create
+    save_character(user_id, character)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\jeu-de-role\bot_mj.py", line 69, in save_character
+    cursor.execute('''
+    ~~~~~~~~~~~~~~^^^^
+        INSERT OR REPLACE INTO characters VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<15 lines>...
+        character.get('last_spell_used', 0)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.OperationalError: table characters has 13 columns but 15 values were supplied
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: OperationalError: table characters has 13 columns but 15 values were supplied
+2025-03-08 19:22:53,305 - ERROR - Ignoring exception in command create
+Traceback (most recent call last):
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\jeu-de-role\bot_mj.py", line 173, in create
+    save_character(user_id, character)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\jeu-de-role\bot_mj.py", line 69, in save_character
+    cursor.execute('''
+    ~~~~~~~~~~~~~~^^^^
+        INSERT OR REPLACE INTO characters VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<15 lines>...
+        character.get('last_spell_used', 0)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.OperationalError: table characters has 13 columns but 15 values were supplied
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: OperationalError: table characters has 13 columns but 15 values were supplied
+2025-03-08 20:17:33,880 - INFO - Démarrage du bot RPG
+2025-03-08 20:17:33,880 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-08 20:17:33,884 - INFO - logging in using static token
+2025-03-08 20:17:33,896 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 20:17:33,896 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:17:34,745 - INFO - Shard ID None has connected to Gateway (Session ID: 9d89b342d35bcb1dddea6bb3b4abe2f9).
+2025-03-08 20:17:36,762 - INFO - Bot connecté en tant que JDR#4227
+2025-03-08 20:17:44,204 - INFO - Commande !ping utilisée par greetaill
+2025-03-08 20:17:53,035 - ERROR - Erreur avec la commande !roll : invalid literal for int() with base 10: ''
+2025-03-08 20:18:04,991 - INFO - Commande !roll utilisée par greetaill : 1d20 -> [10] (Total: 10)
+2025-03-08 20:18:10,628 - ERROR - Ignoring exception in command sheet
+Traceback (most recent call last):
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\jeu-de-role\bot_mj.py", line 182, in sheet
+    character = load_character(user_id)
+  File "C:\Users\Utilisateur\Desktop\jeu-de-role\bot_mj.py", line 110, in load_character
+    "invisible_until": row[13],
+                       ~~~^^^^
+IndexError: tuple index out of range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: IndexError: tuple index out of range
+2025-03-08 20:18:35,146 - INFO - Démarrage du bot RPG
+2025-03-08 20:18:35,146 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-08 20:18:35,150 - INFO - logging in using static token
+2025-03-08 20:18:35,161 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 20:18:35,161 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 20:18:35,974 - INFO - Shard ID None has connected to Gateway (Session ID: 40ca869596b4e8f97dbd730ab6682cd0).
+2025-03-08 20:18:37,999 - INFO - Bot connecté en tant que JDR#4227
+2025-03-08 20:18:52,961 - ERROR - Ignoring exception in command use_soin
+Traceback (most recent call last):
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\jeu-de-role\bot_mj.py", line 211, in use_soin
+    character = load_character(user_id)
+  File "C:\Users\Utilisateur\Desktop\jeu-de-role\bot_mj.py", line 110, in load_character
+    "invisible_until": row[13],
+                       ~~~^^^^
+IndexError: tuple index out of range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: IndexError: tuple index out of range
+2025-03-08 21:07:46,353 - INFO - Démarrage du bot RPG
+2025-03-08 21:10:09,126 - INFO - Démarrage du bot RPG
+2025-03-08 21:10:09,126 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-08 21:10:09,140 - INFO - logging in using static token
+2025-03-08 21:10:09,151 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 21:10:09,152 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 21:10:09,958 - INFO - Shard ID None has connected to Gateway (Session ID: a0342d16ed212061fbbefd0000f101a0).
+2025-03-08 21:10:11,977 - INFO - Bot connecté en tant que JDR#4227
+2025-03-08 21:10:38,924 - INFO - Personnage mehdi sauvegardé pour l'utilisateur 389799360352878592
+2025-03-08 21:10:39,131 - INFO - Personnage mehdi créé par greetaill
+2025-03-08 21:10:45,401 - INFO - Personnage mehdi sauvegardé pour l'utilisateur 389799360352878592
+2025-03-08 21:10:45,713 - INFO - greetaill a utilisé le sort Soin et a restauré 6 PV.
+2025-03-08 21:12:35,813 - INFO - Commande !ping utilisée par greetaill
+2025-03-08 21:12:42,542 - INFO - Commande !roll utilisée par greetaill : 1d20 -> [15] (Total: 15)
+2025-03-08 21:12:49,220 - INFO - Fiche de personnage affichée pour greetaill
+2025-03-08 21:12:56,334 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "spell_soin" is not found
+2025-03-08 21:13:31,721 - INFO - Démarrage du bot RPG
+2025-03-08 21:13:31,722 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-08 21:13:31,735 - INFO - logging in using static token
+2025-03-08 21:13:31,745 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 21:13:31,745 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 21:13:32,442 - INFO - Shard ID None has connected to Gateway (Session ID: c89a9c1f3979f83456d6788e99d08ba7).
+2025-03-08 21:13:34,459 - INFO - Bot connecté en tant que JDR#4227
+2025-03-08 21:13:59,167 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "start_combat" is not found
+2025-03-08 21:14:29,070 - INFO - Démarrage du bot RPG
+2025-03-08 21:14:29,070 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-08 21:14:29,082 - INFO - logging in using static token
+2025-03-08 21:14:29,094 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 21:14:29,094 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 21:14:29,838 - INFO - Shard ID None has connected to Gateway (Session ID: a82d23e0e07fae1abe49e47e99cd3d47).
+2025-03-08 21:14:31,854 - INFO - Bot connecté en tant que JDR#4227
+2025-03-08 21:14:50,964 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "join" is not found
+2025-03-08 21:20:35,307 - INFO - Démarrage du bot RPG
+2025-03-08 21:20:35,307 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-08 21:20:35,319 - INFO - logging in using static token
+2025-03-08 21:20:35,328 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 21:20:35,328 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 21:20:36,165 - INFO - Shard ID None has connected to Gateway (Session ID: 6603aabab528547522bec52a069cbe35).
+2025-03-08 21:20:38,170 - INFO - Bot connecté en tant que JDR#4227
+2025-03-08 21:21:06,154 - INFO - Commande !ping utilisée par greetaill
+2025-03-08 21:21:14,609 - INFO - Commande !roll utilisée par greetaill : 1d20 -> [2] (Total: 2)
+2025-03-08 21:21:22,227 - INFO - Personnage Aragon sauvegardé pour l'utilisateur 389799360352878592
+2025-03-08 21:21:22,493 - INFO - Personnage Aragon créé par greetaill
+2025-03-08 21:21:27,065 - INFO - Fiche de personnage affichée pour greetaill
+2025-03-08 21:21:42,165 - INFO - Personnage Aragon sauvegardé pour l'utilisateur 389799360352878592
+2025-03-08 21:21:42,358 - INFO - greetaill a utilisé le sort Soin et a restauré 10 PV.
+2025-03-08 21:21:51,590 - INFO - Combat démarré par greetaill.
+2025-03-08 21:21:59,442 - INFO - greetaill a rejoint le combat avec Aragon (initiative: 27).
+2025-03-08 21:22:10,883 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "next_trun" is not found
+2025-03-08 21:22:24,443 - INFO - Tour suivant dans le combat : Aragon.
+2025-03-08 21:22:39,844 - INFO - Personnage Aragon sauvegardé pour l'utilisateur 389799360352878592
+2025-03-08 21:22:40,055 - INFO - greetaill a gagné 50 XP. Niveau actuel : 1.
+2025-03-08 21:24:10,050 - INFO - 127.0.0.1 - - [08/Mar/2025 21:24:10] "[31m[1mGET /characters HTTP/1.1[0m" 401 -
+2025-03-08 21:24:18,381 - INFO - 127.0.0.1 - - [08/Mar/2025 21:24:18] "[31m[1mGET /characters HTTP/1.1[0m" 401 -
+2025-03-08 21:24:26,691 - INFO - 127.0.0.1 - - [08/Mar/2025 21:24:26] "[31m[1mGET /characters HTTP/1.1[0m" 401 -
+2025-03-08 21:24:29,381 - INFO - 127.0.0.1 - - [08/Mar/2025 21:24:29] "[31m[1mGET /characters HTTP/1.1[0m" 401 -
+2025-03-08 21:25:03,446 - INFO - Démarrage du bot RPG
+2025-03-08 21:25:03,447 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-08 21:25:03,459 - INFO - logging in using static token
+2025-03-08 21:25:03,468 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 21:25:03,468 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 21:25:04,451 - INFO - Shard ID None has connected to Gateway (Session ID: 591de66042a4db0054d6e0d26f9e4468).
+2025-03-08 21:25:06,459 - INFO - Bot connecté en tant que JDR#4227
+2025-03-08 21:25:09,704 - INFO - 127.0.0.1 - - [08/Mar/2025 21:25:09] "[31m[1mGET /characters HTTP/1.1[0m" 401 -
+2025-03-08 21:27:28,154 - INFO - 127.0.0.1 - - [08/Mar/2025 21:27:28] "GET /characters HTTP/1.1" 200 -

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Quêtes</title>
+</head>
+<body>
+    <h1>Quêtes</h1>
+    <form action="/create_quest" method="post">
+        <label for="name">Nom de la quête:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+        <button type="submit">Créer</button>
+    </form>
+    <ul>
+        {% for name, quest in quests.items() %}
+        <li>{{ name }} : {{ quest.description }} ({{ "Terminée" if quest.completed else "En cours" }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
