@@ -2,14 +2,145 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personnages</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        a {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        canvas {
+            max-width: 600px;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Personnages</h1>
-    <ul>
-        {% for character in characters %}
-        <li>{{ character[1] }} (Niveau {{ character[4] }})</li>
-        {% endfor %}
-    </ul>
+    <h1>Liste des personnages</h1>
+    <table id="charactersTable">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Race</th>
+                <th>Classe</th>
+                <th>Niveau</th>
+                <th>Points de vie</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Les lignes seront ajoutées dynamiquement par JavaScript -->
+        </tbody>
+    </table>
+    <a href="/create_character">Créer un nouveau personnage</a>
+
+    <h2>Répartition des niveaux</h2>
+    <canvas id="levelChart" width="400" height="200"></canvas>
+
+    <script>
+        // Fonction pour récupérer les données des personnages depuis l'API
+        async function fetchCharacters() {
+            try {
+                const response = await fetch('/api/characters');
+                if (!response.ok) {
+                    throw new Error('Erreur lors de la récupération des données');
+                }
+                const characters = await response.json();
+                return characters;
+            } catch (error) {
+                console.error('Erreur:', error);
+                return [];
+            }
+        }
+
+        // Fonction pour afficher les personnages dans le tableau
+        function renderTable(characters) {
+            const tbody = document.querySelector('#charactersTable tbody');
+            tbody.innerHTML = ''; // Vider le tableau avant de le remplir
+
+            characters.forEach(character => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${character.name}</td>
+                    <td>${character.race}</td>
+                    <td>${character.class}</td>
+                    <td>${character.level}</td>
+                    <td>${character.hp}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // Fonction pour afficher le graphique des niveaux
+        function renderChart(characters) {
+            const ctx = document.getElementById('levelChart').getContext('2d');
+            const characterNames = characters.map(character => character.name);
+            const characterLevels = characters.map(character => character.level);
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: characterNames,
+                    datasets: [{
+                        label: 'Niveau',
+                        data: characterLevels,
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Niveau'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Personnages'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Charger les données et afficher la page
+        async function loadPage() {
+            const characters = await fetchCharacters();
+            renderTable(characters);
+            renderChart(characters);
+        }
+
+        // Démarrer le chargement de la page
+        loadPage();
+    </script>
 </body>
 </html>

@@ -294,3 +294,195 @@ discord.ext.commands.errors.CommandNotFound: Command "next_trun" is not found
 2025-03-08 21:25:06,459 - INFO - Bot connecté en tant que JDR#4227
 2025-03-08 21:25:09,704 - INFO - 127.0.0.1 - - [08/Mar/2025 21:25:09] "[31m[1mGET /characters HTTP/1.1[0m" 401 -
 2025-03-08 21:27:28,154 - INFO - 127.0.0.1 - - [08/Mar/2025 21:27:28] "GET /characters HTTP/1.1" 200 -
+2025-03-08 21:43:41,583 - INFO - Démarrage du bot RPG
+2025-03-08 21:43:41,584 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-08 21:43:41,598 - INFO - logging in using static token
+2025-03-08 21:43:41,610 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-08 21:43:41,610 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-08 21:43:42,389 - INFO - Shard ID None has connected to Gateway (Session ID: 46b8bcccf20d615fea9cb14d4a53ddd4).
+2025-03-08 21:43:44,399 - INFO - Bot connecté en tant que JDR#4227
+2025-03-08 21:43:54,795 - INFO - 127.0.0.1 - - [08/Mar/2025 21:43:54] "GET /characters HTTP/1.1" 200 -
+2025-03-10 02:56:44,775 - INFO - Démarrage du bot RPG
+2025-03-10 02:56:44,775 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-10 02:56:44,790 - INFO - logging in using static token
+2025-03-10 02:56:44,815 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-10 02:56:44,815 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-10 02:56:45,587 - INFO - Shard ID None has connected to Gateway (Session ID: fdbc2776cf984dd0e0a25d81352628ca).
+2025-03-10 02:56:47,598 - INFO - Bot connecté en tant que JDR#4227
+2025-03-10 02:57:19,084 - INFO - 127.0.0.1 - - [10/Mar/2025 02:57:19] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-10 02:57:24,835 - INFO - 127.0.0.1 - - [10/Mar/2025 02:57:24] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-10 02:57:24,852 - INFO - 127.0.0.1 - - [10/Mar/2025 02:57:24] "GET /characters HTTP/1.1" 200 -
+2025-03-10 02:57:25,285 - INFO - 127.0.0.1 - - [10/Mar/2025 02:57:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-10 02:58:01,302 - INFO - 127.0.0.1 - - [10/Mar/2025 02:58:01] "GET /characters HTTP/1.1" 200 -
+2025-03-10 03:02:57,789 - WARNING - greetaill a tenté de gagner de l'XP sans personnage.
+2025-03-10 03:10:44,356 - INFO - Démarrage du bot RPG
+2025-03-10 03:10:44,356 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-10 03:10:44,368 - INFO - logging in using static token
+2025-03-10 03:10:44,387 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-10 03:10:44,387 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-10 03:10:45,349 - INFO - Shard ID None has connected to Gateway (Session ID: e4212dfd9d8dee6170fad21bcf63971c).
+2025-03-10 03:10:47,359 - INFO - Bot connecté en tant que JDR#4227
+2025-03-10 03:10:50,702 - INFO - 127.0.0.1 - - [10/Mar/2025 03:10:50] "GET /characters HTTP/1.1" 200 -
+2025-03-10 03:10:52,916 - INFO - 127.0.0.1 - - [10/Mar/2025 03:10:52] "[33mGET /create_character HTTP/1.1[0m" 404 -
+2025-03-10 03:11:02,191 - INFO - 127.0.0.1 - - [10/Mar/2025 03:11:02] "[33mGET /create_character HTTP/1.1[0m" 404 -
+2025-03-10 03:11:04,196 - INFO - 127.0.0.1 - - [10/Mar/2025 03:11:04] "[33mGET /create_character HTTP/1.1[0m" 404 -
+2025-03-10 03:11:05,067 - INFO - 127.0.0.1 - - [10/Mar/2025 03:11:05] "[33mGET /create_character HTTP/1.1[0m" 404 -
+2025-03-10 03:11:05,369 - INFO - 127.0.0.1 - - [10/Mar/2025 03:11:05] "[33mGET /create_character HTTP/1.1[0m" 404 -
+2025-03-10 03:11:25,093 - INFO - Personnage otzim sauvegardé pour l'utilisateur 389799360352878592
+2025-03-10 03:11:25,427 - INFO - Personnage otzim créé par greetaill
+2025-03-10 03:11:27,754 - ERROR - Exception on /characters [GET]
+Traceback (most recent call last):
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_httpauth.py", line 174, in decorated
+    return self.ensure_sync(f)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\Desktop\jeu-de-role\bot_mj.py", line 492, in characters
+    return render_template('characters.html', characters=characters)
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Utilisateur\Desktop\jeu-de-role\templates\characters.html", line 71, in top-level template code
+    //       const characterNames = {{ characters | map('1') | list | tojson | safe }};
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\async_utils.py", line 48, in wrapper
+    return normal_func(*args, **kwargs)
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\filters.py", line 1365, in sync_do_list
+    return list(value)
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\filters.py", line 1503, in sync_do_map
+    yield func(item)
+          ~~~~^^^^^^
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\filters.py", line 1745, in func
+    return context.environment.call_filter(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        name, item, args, kwargs, context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 569, in call_filter
+    return self._filter_test_common(
+           ~~~~~~~~~~~~~~~~~~~~~~~~^
+        name, value, args, kwargs, context, eval_ctx, True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Utilisateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 526, in _filter_test_common
+    raise TemplateRuntimeError(msg)
+jinja2.exceptions.TemplateRuntimeError: No filter named '1'.
+2025-03-10 03:11:27,814 - INFO - 127.0.0.1 - - [10/Mar/2025 03:11:27] "[35m[1mGET /characters HTTP/1.1[0m" 500 -
+2025-03-10 03:12:34,420 - INFO - Personnage otzim sauvegardé pour l'utilisateur 389799360352878592
+2025-03-10 03:12:34,590 - INFO - greetaill a gagné 100 XP. Niveau actuel : 2.
+2025-03-10 03:36:17,970 - INFO - Démarrage du bot RPG
+2025-03-10 03:36:17,971 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-10 03:36:17,983 - INFO - logging in using static token
+2025-03-10 03:36:17,992 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-10 03:36:17,992 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-10 03:36:18,743 - INFO - Shard ID None has connected to Gateway (Session ID: 0067b83a359e1b5a02801d44c973bb17).
+2025-03-10 03:36:20,750 - INFO - Bot connecté en tant que JDR#4227
+2025-03-10 03:36:28,494 - INFO - 127.0.0.1 - - [10/Mar/2025 03:36:28] "GET /characters HTTP/1.1" 200 -
+2025-03-10 03:37:56,363 - INFO - Personnage otzim sauvegardé pour l'utilisateur 389799360352878592
+2025-03-10 03:37:56,589 - INFO - Personnage otzim créé par greetaill
+2025-03-10 03:37:59,819 - INFO - 127.0.0.1 - - [10/Mar/2025 03:37:59] "GET /characters HTTP/1.1" 200 -
+2025-03-10 03:38:15,945 - INFO - Personnage otzim sauvegardé pour l'utilisateur 389799360352878592
+2025-03-10 03:38:16,275 - INFO - greetaill a gagné 100 XP. Niveau actuel : 2.
+2025-03-10 03:38:19,566 - INFO - 127.0.0.1 - - [10/Mar/2025 03:38:19] "GET /characters HTTP/1.1" 200 -
+2025-03-10 03:38:20,435 - INFO - 127.0.0.1 - - [10/Mar/2025 03:38:20] "GET /characters HTTP/1.1" 200 -
+2025-03-10 03:38:22,483 - INFO - 127.0.0.1 - - [10/Mar/2025 03:38:22] "GET /characters HTTP/1.1" 200 -
+2025-03-10 03:38:22,837 - INFO - 127.0.0.1 - - [10/Mar/2025 03:38:22] "GET /characters HTTP/1.1" 200 -
+2025-03-10 03:38:23,141 - INFO - 127.0.0.1 - - [10/Mar/2025 03:38:23] "GET /characters HTTP/1.1" 200 -
+2025-03-10 03:48:48,016 - INFO - Démarrage du bot RPG
+2025-03-10 03:48:48,017 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-10 03:48:48,063 - INFO - logging in using static token
+2025-03-10 03:48:48,072 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-10 03:48:48,073 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-10 03:48:48,990 - INFO - Shard ID None has connected to Gateway (Session ID: a380ab29fe13381faf69d54a08e74e56).
+2025-03-10 03:48:50,995 - INFO - Bot connecté en tant que JDR#4227
+2025-03-10 03:48:55,786 - INFO - 127.0.0.1 - - [10/Mar/2025 03:48:55] "GET /characters HTTP/1.1" 200 -
+2025-03-10 03:48:55,848 - INFO - 127.0.0.1 - - [10/Mar/2025 03:48:55] "[33mGET /api/characters HTTP/1.1[0m" 404 -
+2025-03-10 03:49:07,283 - INFO - 127.0.0.1 - - [10/Mar/2025 03:49:07] "[33mGET /create_character HTTP/1.1[0m" 404 -
+2025-03-10 03:53:25,292 - INFO - Personnage Delphine sauvegardé pour l'utilisateur 389799360352878592
+2025-03-10 03:53:25,573 - INFO - Personnage Delphine créé par greetaill
+2025-03-10 03:53:30,362 - INFO - 127.0.0.1 - - [10/Mar/2025 03:53:30] "GET /characters HTTP/1.1" 200 -
+2025-03-10 03:53:30,449 - INFO - 127.0.0.1 - - [10/Mar/2025 03:53:30] "[33mGET /api/characters HTTP/1.1[0m" 404 -
+2025-03-10 04:01:05,777 - INFO - Démarrage du bot RPG
+2025-03-10 04:01:05,777 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-10 04:01:05,790 - INFO - logging in using static token
+2025-03-10 04:01:05,799 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-10 04:01:05,799 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-10 04:01:06,582 - INFO - Shard ID None has connected to Gateway (Session ID: fa31ae32ab8db7c2f1f6ff01d9fb90b4).
+2025-03-10 04:01:08,591 - INFO - Bot connecté en tant que JDR#4227
+2025-03-10 04:01:12,365 - INFO - 127.0.0.1 - - [10/Mar/2025 04:01:12] "GET /characters HTTP/1.1" 200 -
+2025-03-10 04:01:12,447 - INFO - 127.0.0.1 - - [10/Mar/2025 04:01:12] "[33mGET /api/characters HTTP/1.1[0m" 404 -
+2025-03-10 04:01:15,641 - INFO - 127.0.0.1 - - [10/Mar/2025 04:01:15] "[33mGET /create_character HTTP/1.1[0m" 404 -
+2025-03-10 04:01:53,416 - INFO - 127.0.0.1 - - [10/Mar/2025 04:01:53] "GET /characters HTTP/1.1" 200 -
+2025-03-10 04:01:53,717 - INFO - 127.0.0.1 - - [10/Mar/2025 04:01:53] "[33mGET /api/characters HTTP/1.1[0m" 404 -
+2025-03-10 04:02:22,389 - INFO - Personnage otzim sauvegardé pour l'utilisateur 389799360352878592
+2025-03-10 04:02:22,597 - INFO - Personnage otzim créé par greetaill
+2025-03-10 04:02:26,582 - INFO - 127.0.0.1 - - [10/Mar/2025 04:02:26] "GET /characters HTTP/1.1" 200 -
+2025-03-10 04:02:26,666 - INFO - 127.0.0.1 - - [10/Mar/2025 04:02:26] "[33mGET /api/characters HTTP/1.1[0m" 404 -
+2025-03-10 04:05:18,462 - INFO - Démarrage du bot RPG
+2025-03-10 04:05:18,462 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-10 04:05:18,473 - INFO - logging in using static token
+2025-03-10 04:05:18,484 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-10 04:05:18,484 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-10 04:05:19,412 - INFO - Shard ID None has connected to Gateway (Session ID: f12a0630590775e680237db39e22d085).
+2025-03-10 04:05:21,425 - INFO - Bot connecté en tant que JDR#4227
+2025-03-10 04:05:24,611 - INFO - 127.0.0.1 - - [10/Mar/2025 04:05:24] "GET /characters HTTP/1.1" 200 -
+2025-03-10 04:05:24,688 - INFO - 127.0.0.1 - - [10/Mar/2025 04:05:24] "[33mGET /api/characters HTTP/1.1[0m" 404 -
+2025-03-10 04:05:27,064 - INFO - 127.0.0.1 - - [10/Mar/2025 04:05:27] "[33mGET /create_character HTTP/1.1[0m" 404 -
+2025-03-10 04:08:42,697 - INFO - 127.0.0.1 - - [10/Mar/2025 04:08:42] "[33mGET /create_character HTTP/1.1[0m" 404 -
+2025-03-10 04:49:19,368 - WARNING - Shard ID None has stopped responding to the gateway. Closing and restarting.
+2025-03-10 04:49:19,595 - INFO - Shard ID None session has been invalidated.
+2025-03-10 04:49:25,004 - INFO - Shard ID None has connected to Gateway (Session ID: 99fb1b886786e769349bf900766db292).
+2025-03-10 04:49:27,017 - INFO - Bot connecté en tant que JDR#4227
+2025-03-10 04:51:35,726 - INFO - Démarrage du bot RPG
+2025-03-10 04:51:35,727 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-10 04:51:35,739 - INFO - logging in using static token
+2025-03-10 04:51:35,750 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-10 04:51:35,750 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-10 04:51:36,627 - INFO - Shard ID None has connected to Gateway (Session ID: eb6fac015134affaaccef268d828da36).
+2025-03-10 04:51:38,628 - INFO - Bot connecté en tant que JDR#4227
+2025-03-10 04:51:40,329 - INFO - 127.0.0.1 - - [10/Mar/2025 04:51:40] "GET /characters HTTP/1.1" 200 -
+2025-03-10 04:51:40,413 - INFO - 127.0.0.1 - - [10/Mar/2025 04:51:40] "[33mGET /api/characters HTTP/1.1[0m" 404 -
+2025-03-10 04:51:41,473 - INFO - 127.0.0.1 - - [10/Mar/2025 04:51:41] "[33mGET /create_character HTTP/1.1[0m" 404 -
+2025-03-10 04:55:04,260 - INFO - Démarrage du bot RPG
+2025-03-10 04:55:04,261 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-10 04:55:04,274 - INFO - logging in using static token
+2025-03-10 04:55:04,285 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-10 04:55:04,285 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-10 04:55:05,106 - INFO - Shard ID None has connected to Gateway (Session ID: f3f80ea412e91eff732a86876130d07b).
+2025-03-10 04:55:07,119 - INFO - Bot connecté en tant que JDR#4227
+2025-03-10 04:55:15,738 - INFO - 127.0.0.1 - - [10/Mar/2025 04:55:15] "[33mGET /create_character HTTP/1.1[0m" 404 -
+2025-03-10 04:56:06,762 - INFO - Démarrage du bot RPG
+2025-03-10 04:56:06,762 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-10 04:56:06,774 - INFO - logging in using static token
+2025-03-10 04:56:06,784 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-10 04:56:06,785 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-10 04:56:07,509 - INFO - Shard ID None has connected to Gateway (Session ID: 8b35616d7c93f53f687c00b3ff0c1bcb).
+2025-03-10 04:56:09,513 - INFO - Bot connecté en tant que JDR#4227
+2025-03-10 04:56:15,513 - INFO - 127.0.0.1 - - [10/Mar/2025 04:56:15] "GET /characters HTTP/1.1" 200 -
+2025-03-10 04:56:15,623 - INFO - 127.0.0.1 - - [10/Mar/2025 04:56:15] "[33mGET /api/characters HTTP/1.1[0m" 404 -
+2025-03-10 04:56:41,532 - INFO - 127.0.0.1 - - [10/Mar/2025 04:56:41] "[33mGET /create_character HTTP/1.1[0m" 404 -
