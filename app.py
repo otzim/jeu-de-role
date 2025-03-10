@@ -134,19 +134,38 @@ def create_character():
         return redirect(url_for('login'))  # Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
 
     if request.method == 'POST':
+        # Récupérer les données du formulaire
         name = request.form.get('name')
         race = request.form.get('race')
         character_class = request.form.get('class')
-        level = int(request.form.get('level'))
-        hp = int(request.form.get('hp'))
-        strength = int(request.form.get('strength'))
-        dexterity = int(request.form.get('dexterity'))
-        constitution = int(request.form.get('constitution'))
-        intelligence = int(request.form.get('intelligence'))
-        wisdom = int(request.form.get('wisdom'))
-        charisma = int(request.form.get('charisma'))
+        level = request.form.get('level', '1')  # Niveau par défaut à 1
+        hp = request.form.get('hp')
+        strength = request.form.get('strength')
+        dexterity = request.form.get('dexterity')
+        constitution = request.form.get('constitution')
+        intelligence = request.form.get('intelligence')
+        wisdom = request.form.get('wisdom')
+        charisma = request.form.get('charisma')
 
-        user_id = current_user.id  # Utiliser l'ID de l'utilisateur connecté
+        # Vérifier que tous les champs sont remplis
+        if not all([name, race, character_class, level, hp, strength, dexterity, constitution, intelligence, wisdom, charisma]):
+            return "Tous les champs sont obligatoires", 400
+
+        # Convertir les valeurs en entiers
+        try:
+            level = int(level)
+            hp = int(hp)
+            strength = int(strength)
+            dexterity = int(dexterity)
+            constitution = int(constitution)
+            intelligence = int(intelligence)
+            wisdom = int(wisdom)
+            charisma = int(charisma)
+        except ValueError:
+            return "Les caractéristiques doivent être des nombres valides", 400
+
+        # Sauvegarder le personnage
+        user_id = current_user.id
         character = {
             "name": name,
             "race": race,

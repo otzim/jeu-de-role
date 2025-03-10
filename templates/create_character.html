@@ -3,45 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Créer un personnage</title>
+    <title>Créer un Personnage</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        .form-section {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .details-section {
+            flex: 1;
+            padding: 10px;
+            border-left: 1px solid #ccc;
+        }
+        .stats-section {
+            margin-top: 20px;
+        }
+        .stats-section input {
+            background-color: #f0f0f0;
+            cursor: not-allowed;
+        }
+        #magic-school-section {
+            display: none; /* Caché par défaut */
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        // Données des races
+        const races = {
+            "Humains": {
+                advantages: "Polyvalents, +1 à toutes les caractéristiques.",
+                traits: "Adaptables, ils apprennent rapidement.",
+                modifiers: { strength: 1, dexterity: 1, constitution: 1, intelligence: 1, wisdom: 1, charisma: 1 }
+            },
+            "Elfes": {
+                advantages: "Affinité magique, +2 à l'Intelligence ou à la Sagesse.",
+                traits: "Vision nocturne, résistance aux charmes.",
+                modifiers: { strength: 0, dexterity: 2, constitution: 0, intelligence: 2, wisdom: 1, charisma: 0 }
+            },
+            "Nains": {
+                advantages: "Résistance physique, +2 à la Force ou à la Constitution.",
+                traits: "Résistance aux poisons, expertise en forge.",
+                modifiers: { strength: 2, dexterity: 0, constitution: 2, intelligence: 0, wisdom: 1, charisma: 0 }
+            },
+            "Orcs": {
+                advantages: "Force brute, +2 à la Force ou à l'Endurance.",
+                traits: "Rage au combat, régénération limitée.",
+                modifiers: { strength: 3, dexterity: 0, constitution: 2, intelligence: -1, wisdom: 0, charisma: -1 }
+            },
+            "Félins": {
+                advantages: "Agilité, +2 à la Dextérité ou à la Perception.",
+                traits: "Griffes naturelles, saut amélioré.",
+                modifiers: { strength: 0, dexterity: 3, constitution: 0, intelligence: 1, wisdom: 1, charisma: 1 }
+            },
+            "Démons": {
+                advantages: "Affinité avec les ténèbres, +2 à l'Intelligence ou au Charisme.",
+                traits: "Résistance au feu, capacité à invoquer des flammes infernales.",
+                modifiers: { strength: 1, dexterity: 1, constitution: 1, intelligence: 2, wisdom: 0, charisma: 2 }
+            }
+        };
+
+        // Données des classes
+        const classes = {
+            "Guerrier": { hp: 12, description: "Compétences : Maîtrise des armes, armure lourde. Capacités spéciales : Cri de guerre, contre-attaque." },
+            "Mage": { hp: 6, description: "Compétences : Magie élémentaire, invocation. Capacités spéciales : Bouclier magique, explosion de mana." },
+            "Voleur": { hp: 8, description: "Compétences : Discrétion, crochetage. Capacités spéciales : Attaque sournoise, esquive." },
+            "Prêtre": { hp: 8, description: "Compétences : Soins, bénédictions. Capacités spéciales : Résurrection, purification." },
+            "Rôdeur": { hp: 10, description: "Compétences : Tir à l'arc, pistage. Capacités spéciales : Appel animal, camouflage." },
+            "Berserker": { hp: 14, description: "Compétences : Combat frénétique, résistance aux dégâts. Capacités spéciales : Rage dévastatrice, immunité temporaire." }
+        };
+
+        // Données des écoles de magie
+        const magicSchools = {
+            "Élémentaire": {
+                description: "Sorts : Boule de feu, vague de glace, foudre. Utilisation : Dégâts purs, contrôle des éléments."
+            },
+            "Nécromancie": {
+                description: "Sorts : Invocation de morts-vivants, drain de vie. Utilisation : Manipulation des forces obscures."
+            },
+            "Illusion": {
+                description: "Sorts : Invisibilité, mirage, manipulation mentale. Utilisation : Tromperie et diversion."
+            },
+            "Divine": {
+                description: "Sorts : Soins, protection, bénédictions. Utilisation : Soutien et purification."
+            },
+            "Chronomancie": {
+                description: "Sorts : Ralentissement, accélération, arrêt du temps. Utilisation : Manipulation du temps."
+            },
+            "Druidique": {
+                description: "Sorts : Invocation de plantes, transformation animale. Utilisation : Harmonie avec la nature."
+            }
+        };
+
+        // Fonction pour mettre à jour les détails de la classe, de la race et de l'école de magie
+        function updateDetails() {
+            const selectedRace = document.getElementById('race').value;
+            const selectedClass = document.getElementById('class').value;
+            const selectedMagicSchool = document.getElementById('magic-school').value;
+
+            // Mettre à jour les détails de la race
+            document.getElementById('race-advantages').innerText = races[selectedRace].advantages;
+            document.getElementById('race-traits').innerText = races[selectedRace].traits;
+
+            // Mettre à jour les détails de la classe
+            document.getElementById('class-details').innerText = classes[selectedClass].description;
+
+            // Afficher ou masquer la section des écoles de magie
+            const magicSchoolSection = document.getElementById('magic-school-section');
+            if (selectedClass === "Mage") {
+                magicSchoolSection.style.display = 'block';
+                document.getElementById('magic-school-details').innerText = magicSchools[selectedMagicSchool].description;
+            } else {
+                magicSchoolSection.style.display = 'none';
+            }
+
+            // Calculer les caractéristiques de base
+            const baseStats = { strength: 10, dexterity: 10, constitution: 10, intelligence: 10, wisdom: 10, charisma: 10 };
+            const raceModifiers = races[selectedRace].modifiers;
+
+            // Appliquer les modificateurs de race
+            const finalStats = {
+                strength: baseStats.strength + raceModifiers.strength,
+                dexterity: baseStats.dexterity + raceModifiers.dexterity,
+                constitution: baseStats.constitution + raceModifiers.constitution,
+                intelligence: baseStats.intelligence + raceModifiers.intelligence,
+                wisdom: baseStats.wisdom + raceModifiers.wisdom,
+                charisma: baseStats.charisma + raceModifiers.charisma
+            };
+
+            // Mettre à jour les champs de caractéristiques
+            document.getElementById('strength').value = finalStats.strength;
+            document.getElementById('dexterity').value = finalStats.dexterity;
+            document.getElementById('constitution').value = finalStats.constitution;
+            document.getElementById('intelligence').value = finalStats.intelligence;
+            document.getElementById('wisdom').value = finalStats.wisdom;
+            document.getElementById('charisma').value = finalStats.charisma;
+
+            // Mettre à jour les points de vie en fonction de la classe
+            document.getElementById('hp').value = classes[selectedClass].hp;
+        }
+
+        // Appeler la fonction au chargement de la page
+        window.onload = function () {
+            updateDetails();
+        };
+    </script>
 </head>
 <body>
-    <h1>Créer un personnage</h1>
-    <form method="POST" action="/create_character">
-        <label for="name">Nom:</label>
-        <input type="text" id="name" name="name" required><br><br>
-        
-        <label for="race">Race:</label>
-        <input type="text" id="race" name="race" required><br><br>
-        
-        <label for="class">Classe:</label>
-        <input type="text" id="class" name="class" required><br><br>
-        
-        <label for="level">Niveau:</label>
-        <input type="number" id="level" name="level" required><br><br>
-        
-        <label for="hp">Points de vie:</label>
-        <input type="number" id="hp" name="hp" required><br><br>
-        
-        <label for="strength">Force:</label>
-        <input type="number" id="strength" name="strength" required><br><br>
-        
-        <label for="dexterity">Dextérité:</label>
-        <input type="number" id="dexterity" name="dexterity" required><br><br>
-        
-        <label for="constitution">Constitution:</label>
-        <input type="number" id="constitution" name="constitution" required><br><br>
-        
-        <label for="intelligence">Intelligence:</label>
-        <input type="number" id="intelligence" name="intelligence" required><br><br>
-        
-        <label for="wisdom">Sagesse:</label>
-        <input type="number" id="wisdom" name="wisdom" required><br><br>
-        
-        <label for="charisma">Charisme:</label>
-        <input type="number" id="charisma" name="charisma" required><br><br>
-        
-        <button type="submit">Créer</button>
-    </form>
+    <h1>Créer un Personnage</h1>
+    <div class="container">
+        <div class="form-section">
+            <form method="POST" action="{{ url_for('create_character') }}">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="race">Race:</label>
+                <select id="race" name="race" onchange="updateDetails()" required>
+                    <option value="Humains">Humains</option>
+                    <option value="Elfes">Elfes</option>
+                    <option value="Nains">Nains</option>
+                    <option value="Orcs">Orcs</option>
+                    <option value="Félins">Félins</option>
+                    <option value="Démons">Démons</option>
+                </select><br><br>
+
+                <label for="class">Classe:</label>
+                <select id="class" name="class" onchange="updateDetails()" required>
+                    <option value="Guerrier">Guerrier</option>
+                    <option value="Mage">Mage</option>
+                    <option value="Voleur">Voleur</option>
+                    <option value="Prêtre">Prêtre</option>
+                    <option value="Rôdeur">Rôdeur</option>
+                    <option value="Berserker">Berserker</option>
+                </select><br><br>
+
+                <!-- Section des écoles de magie (cachée par défaut) -->
+                <div id="magic-school-section">
+                    <label for="magic-school">École de magie:</label>
+                    <select id="magic-school" name="magic-school" onchange="updateDetails()">
+                        <option value="Élémentaire">Élémentaire</option>
+                        <option value="Nécromancie">Nécromancie</option>
+                        <option value="Illusion">Illusion</option>
+                        <option value="Divine">Divine</option>
+                        <option value="Chronomancie">Chronomancie</option>
+                        <option value="Druidique">Druidique</option>
+                    </select><br><br>
+                </div>
+
+                <label for="level">Niveau:</label>
+                <input type="number" id="level" name="level" value="1" readonly><br><br>
+
+                <label for="hp">Points de vie (HP):</label>
+                <input type="number" id="hp" name="hp" readonly><br><br>
+
+                <div class="stats-section">
+                    <h3>Caractéristiques</h3>
+                    <label for="strength">Force:</label>
+                    <input type="number" id="strength" name="strength" readonly><br><br>
+
+                    <label for="dexterity">Dextérité:</label>
+                    <input type="number" id="dexterity" name="dexterity" readonly><br><br>
+
+                    <label for="constitution">Constitution:</label>
+                    <input type="number" id="constitution" name="constitution" readonly><br><br>
+
+                    <label for="intelligence">Intelligence:</label>
+                    <input type="number" id="intelligence" name="intelligence" readonly><br><br>
+
+                    <label for="wisdom">Sagesse:</label>
+                    <input type="number" id="wisdom" name="wisdom" readonly><br><br>
+
+                    <label for="charisma">Charisme:</label>
+                    <input type="number" id="charisma" name="charisma" readonly><br><br>
+                </div>
+
+                <button type="submit">Créer</button>
+            </form>
+        </div>
+
+        <div class="details-section">
+            <h2>Détails de la Race</h2>
+            <p><strong>Avantages :</strong> <span id="race-advantages"></span></p>
+            <p><strong>Traits :</strong> <span id="race-traits"></span></p>
+
+            <h2>Détails de la Classe</h2>
+            <p id="class-details"></p>
+
+            <h2>Détails de l'École de Magie</h2>
+            <p id="magic-school-details"></p>
+        </div>
+    </div>
+
+    <!-- Bouton Retour -->
+    <a href="{{ url_for('characters') }}">
+        <button>Retour à la liste des personnages</button>
+    </a>
 </body>
 </html>
